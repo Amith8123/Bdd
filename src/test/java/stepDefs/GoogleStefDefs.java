@@ -43,7 +43,20 @@ public class GoogleStefDefs {
 	}
 	@Then("Should display Selenium Search result page")
 	public void should_display_selenium_search_result_page() {
-		Assert.assertEquals(driver.getTitle(), "Selenium Tutorial - Google Search Page");
+		Assert.assertEquals(driver.getTitle(), "Selenium Tutorial - Google Search");
+	     
+	}
+	
+	@When("User search Cypress Tutorial")
+	public void user_search_cypress_tutorial() {
+		WebElement searchText=driver.findElement(By.name("q"));
+		searchText.sendKeys("Cypress Tutorial");
+		searchText.submit();
+	}
+	
+	@Then("Should display Cypress Search result page")
+	public void should_display_Cypress_search_result_page() {
+		Assert.assertEquals(driver.getTitle(), "Cypress Tutorial - Google Search");
 	     
 	}
 	

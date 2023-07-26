@@ -6,7 +6,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features="src\\test\\resources\\features\\GooglePageTest.feature",
+		//features="src\\test\\resources\\features\\GooglePageTest.feature",
+		features="src\\test\\resources\\features\\SendComments.feature",
 		glue= {"stepDefs"},
 		monochrome=true,
 		//dryRun=true,
